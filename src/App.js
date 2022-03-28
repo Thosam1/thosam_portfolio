@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+// containers   -- very useful with index.js in container folder
+import { About, Footer, Header, Skills, Testimonial, Work } from './container';
+
+// components   -- very useful with index.js in components folder
+import { Navbar } from './components';
+
+// styles
+import './App.scss';
+
+const App = () => (
+  <div className="app">
+    <Navbar />
+    <Header />
+    <About />
+    <Work />
+    <Skills />
+    <Testimonial />
+    <Footer />
+  </div>
+);
 
 export default App;
