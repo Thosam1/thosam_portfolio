@@ -98,11 +98,14 @@
   align-items: center;
   background-color: var(--secondary-color);
 
-
   svg {
     width: 70%;
     height: 70%;
     color: var(--white-color);
+    
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   div {
@@ -114,15 +117,16 @@
 
     padding: 1rem;
 
-    width: 80%;
+    width: 300px;
     height: 100vh;
     
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+
     
-    background: url('../../assets/bgWhite.png');
+    // background: url('../../assets/bgWhite.png');
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
@@ -136,7 +140,12 @@
       height: 35px;
       color: var(--secondary-color);
       margin: 0.5rem 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
+
 
     ul {
       list-style: none;
@@ -162,9 +171,15 @@
 
           transition: all 0.3s ease-in-out;
 
-          &:hover {
-            color: var(--secondary-color);
-          }
+          // &:hover {
+          //   color: var(--secondary-color);
+          //   transform: scale(1.2);
+          // }
+        }
+
+        &:hover {
+          color: var(--secondary-color);
+          transform: scale(1.04);
         }
       }
     }
