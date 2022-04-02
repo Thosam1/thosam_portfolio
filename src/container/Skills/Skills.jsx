@@ -15,9 +15,12 @@ import { urlFor, client } from '../../client';
 import './Skills.scss';
 
 const Skills = () => {
+
+  // state - data is fetched from backend
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
 
+  // fetching all skills from database - sanity
   useEffect(() => {
     const query = '*[_type == "experiences"]';
     const skillsQuery = '*[_type == "skills"]';
@@ -50,6 +53,7 @@ const Skills = () => {
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
+
               <p className="p-text">{skill.name}</p>
             </motion.div>
           ))}
@@ -63,6 +67,7 @@ const Skills = () => {
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
+
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
@@ -96,6 +101,7 @@ const Skills = () => {
   );
 };
 
+// AppWrap() is important so the content takes 100% of the screen
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',

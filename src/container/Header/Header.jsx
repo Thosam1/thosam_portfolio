@@ -53,17 +53,24 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      {/* <img src={images.profile} alt="profile_bg" /> */}
-      <motion.img
+      {/* <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
+      /> */}
+      <motion.img
+        whileInView={{ scale: [0, 1] }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        src={images.thosam}
+        alt="profile_picture"
+        className="overlay_profile_picture app__flex"
       />
+      
     </motion.div>
 
-    <motion.div
+    {/* <motion.div
       variants={scaleVariants}
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
@@ -73,7 +80,7 @@ const Header = () => (
           <img src={circle} alt="profile_bg" />
         </div>
       ))}
-    </motion.div>
+    </motion.div> */}
   </div>
 );
 
